@@ -1,0 +1,51 @@
+{
+  "extName": {
+    "message": "phonekey"
+  },
+  "extDescription": {
+    "message": "Sign in to web sites with a passkey on your phone, over Bluetooth, on Linux."
+  },
+  "title": {
+    "message": "Sign in with a passkey"
+  },
+  "site": {
+    "message": "$SITE$ asks for a passkey.",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "usePhone": {
+    "message": "Use a phone"
+  },
+  "useKey": {
+    "message": "Use a security key"
+  },
+  "scan": {
+    "message": "Scan this QR code with the camera of the phone that has your passkey. Bluetooth must be on, on the phone and on this computer."
+  },
+  "waiting": {
+    "message": "Waiting for the phone…"
+  },
+  "connecting": {
+    "message": "Connecting to the phone…"
+  },
+  "connected": {
+    "message": "Connected to the phone"
+  },
+  "confirm": {
+    "message": "Confirm the sign-in on the phone"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "phoneError": {
+    "message": "Cannot use the phone: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  }
+}

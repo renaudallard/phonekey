@@ -1,0 +1,61 @@
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 40%);
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  box-sizing: border-box;
+  max-width: min(24em, calc(100% - 32px));
+  padding: 24px;
+  border: 1px solid ThreeDShadow;
+  border-radius: 4px;
+  background-color: Canvas;
+  color: CanvasText;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin-top: 0;
+}
+
+#site {
+  overflow-wrap: anywhere;
+}
+
+#error {
+  color: light-dark(#b00020, #ff8a80);
+  overflow-wrap: anywhere;
+}
+
+#choose:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* The QR code keeps its white margin in dark mode, phones need it. */
+#qr {
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+#qr:not([src]) {
+  visibility: hidden;
+}

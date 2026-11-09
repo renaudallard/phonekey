@@ -1,0 +1,51 @@
+{
+  "extName": {
+    "message": "phonekey"
+  },
+  "extDescription": {
+    "message": "Mit einem Passkey auf dem Telefon über Bluetooth bei Websites anmelden, unter Linux."
+  },
+  "title": {
+    "message": "Mit einem Passkey anmelden"
+  },
+  "site": {
+    "message": "$SITE$ fragt nach einem Passkey.",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "usePhone": {
+    "message": "Ein Telefon verwenden"
+  },
+  "useKey": {
+    "message": "Einen Sicherheitsschlüssel verwenden"
+  },
+  "scan": {
+    "message": "Diesen QR-Code mit der Kamera des Telefons scannen, auf dem der Passkey gespeichert ist. Bluetooth muss auf dem Telefon und auf diesem Computer eingeschaltet sein."
+  },
+  "waiting": {
+    "message": "Warten auf das Telefon…"
+  },
+  "connecting": {
+    "message": "Verbindung mit dem Telefon…"
+  },
+  "connected": {
+    "message": "Mit dem Telefon verbunden"
+  },
+  "confirm": {
+    "message": "Die Anmeldung auf dem Telefon bestätigen"
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "phoneError": {
+    "message": "Das Telefon kann nicht verwendet werden: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  }
+}

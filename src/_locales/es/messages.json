@@ -1,0 +1,51 @@
+{
+  "extName": {
+    "message": "phonekey"
+  },
+  "extDescription": {
+    "message": "Inicie sesión en sitios web con una clave de acceso de su teléfono, por Bluetooth, en Linux."
+  },
+  "title": {
+    "message": "Iniciar sesión con una clave de acceso"
+  },
+  "site": {
+    "message": "$SITE$ solicita una clave de acceso.",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "usePhone": {
+    "message": "Usar un teléfono"
+  },
+  "useKey": {
+    "message": "Usar una llave de seguridad"
+  },
+  "scan": {
+    "message": "Escanee este código QR con la cámara del teléfono que tiene su clave de acceso. El Bluetooth debe estar activado en el teléfono y en este equipo."
+  },
+  "waiting": {
+    "message": "Esperando al teléfono…"
+  },
+  "connecting": {
+    "message": "Conectando con el teléfono…"
+  },
+  "connected": {
+    "message": "Conectado al teléfono"
+  },
+  "confirm": {
+    "message": "Confirme el inicio de sesión en el teléfono"
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "phoneError": {
+    "message": "No se puede usar el teléfono: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  }
+}

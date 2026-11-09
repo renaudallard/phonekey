@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="prompt.css">
+    <script src="prompt.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="title"></h1>
+      <p id="site"></p>
+      <p id="error" hidden></p>
+      <div id="choose">
+        <button id="phone" data-i18n="usePhone"></button>
+        <button id="key" data-i18n="useKey"></button>
+      </div>
+      <div id="scan" hidden>
+        <p data-i18n="scan"></p>
+        <img id="qr" alt="">
+        <p id="progress"></p>
+      </div>
+      <button id="cancel" data-i18n="cancel"></button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "extName": {
+    "message": "phonekey"
+  },
+  "extDescription": {
+    "message": "Meld u aan bij websites met een passkey op uw telefoon, via Bluetooth, op Linux."
+  },
+  "title": {
+    "message": "Aanmelden met een passkey"
+  },
+  "site": {
+    "message": "$SITE$ vraagt om een passkey.",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "usePhone": {
+    "message": "Een telefoon gebruiken"
+  },
+  "useKey": {
+    "message": "Een beveiligingssleutel gebruiken"
+  },
+  "scan": {
+    "message": "Scan deze QR-code met de camera van de telefoon waarop uw passkey staat. Bluetooth moet aan staan op de telefoon en op deze computer."
+  },
+  "waiting": {
+    "message": "Wachten op de telefoon…"
+  },
+  "connecting": {
+    "message": "Verbinden met de telefoon…"
+  },
+  "connected": {
+    "message": "Verbonden met de telefoon"
+  },
+  "confirm": {
+    "message": "Bevestig de aanmelding op de telefoon"
+  },
+  "cancel": {
+    "message": "Annuleren"
+  },
+  "phoneError": {
+    "message": "De telefoon kan niet worden gebruikt: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  }
+}

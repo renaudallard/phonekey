@@ -1,0 +1,51 @@
+{
+  "extName": {
+    "message": "phonekey"
+  },
+  "extDescription": {
+    "message": "Accedi ai siti web con una passkey sul telefono, tramite Bluetooth, su Linux."
+  },
+  "title": {
+    "message": "Accedi con una passkey"
+  },
+  "site": {
+    "message": "$SITE$ richiede una passkey.",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "usePhone": {
+    "message": "Usa un telefono"
+  },
+  "useKey": {
+    "message": "Usa una chiave di sicurezza"
+  },
+  "scan": {
+    "message": "Scansiona questo codice QR con la fotocamera del telefono che contiene la passkey. Il Bluetooth deve essere attivo sul telefono e su questo computer."
+  },
+  "waiting": {
+    "message": "In attesa del telefono…"
+  },
+  "connecting": {
+    "message": "Connessione al telefono…"
+  },
+  "connected": {
+    "message": "Connesso al telefono"
+  },
+  "confirm": {
+    "message": "Conferma l'accesso sul telefono"
+  },
+  "cancel": {
+    "message": "Annulla"
+  },
+  "phoneError": {
+    "message": "Impossibile usare il telefono: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  }
+}
