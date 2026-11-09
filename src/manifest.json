@@ -4,6 +4,13 @@
   "description": "__MSG_extDescription__",
   "version": "0.2.0",
   "default_locale": "en",
+  "icons": {
+    "16": "icons/icon-16.svg",
+    "32": "icons/icon.svg",
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg",
+    "128": "icons/icon.svg"
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "phonekey@arnor.org",
