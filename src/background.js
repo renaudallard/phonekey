@@ -3,13 +3,13 @@
  *
  * content.js hands the request of the page over and frames prompt.html over
  * the page, where the user picks the phone or Firefox's own handling. For
- * the phone, the towa-passkey native helper shows a QR code and talks to the
+ * the phone, the hybrid-passkey native helper shows a QR code and talks to the
  * phone over Bluetooth and the FIDO hybrid transport.
  */
 
 "use strict";
 
-const kHelper = "towa_passkey";
+const kHelper = "hybrid_passkey";
 const kPromptURL = browser.runtime.getURL("/prompt.html");
 
 // The request of each tab, by tab id:

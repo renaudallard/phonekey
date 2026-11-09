@@ -8,10 +8,9 @@ a QR code appears; scan it with the phone's camera, the phone checks that it
 is near the computer over Bluetooth and signs in through the relay server of
 the phone's vendor. A security key goes to Firefox's own handling.
 
-The Bluetooth and FIDO work is done by `towa-passkey`, the native helper of
-[Towa](https://github.com/renaudallard/Towa), shared by both add-ons. It
-uses [libwebauthn](https://github.com/linux-credentials/libwebauthn)
-(LGPL-2.1-or-later).
+The Bluetooth and FIDO work is done by the
+[hybrid-passkey](https://github.com/renaudallard/hybrid-passkey) native
+helper, which [Towa](https://github.com/renaudallard/Towa) uses too.
 
 ## Requirements
 
@@ -23,22 +22,21 @@ uses [libwebauthn](https://github.com/linux-credentials/libwebauthn)
 
 ## Installation
 
-1.  Install the helper in any directory, for example `~/.local/bin`. `bin/`
-    has it prebuilt for x86-64 (`towa-passkey-amd64`), for distributions
-    with glibc 2.34 or later:
+1.  Install the helper in any directory, for example `~/.local/bin`. Its
+    [releases](https://github.com/renaudallard/hybrid-passkey/releases/latest)
+    have it prebuilt for x86-64 (`hybrid-passkey-amd64`), for distributions
+    with glibc 2.34 or later, and its README says how to build it:
 
-        install -m 755 bin/towa-passkey-amd64 ~/.local/bin/towa-passkey
+        install -m 755 hybrid-passkey-amd64 ~/.local/bin/hybrid-passkey
 
-    Or build it from `helper/towa-passkey` in the Towa repository with
-    `cargo build --release`. Helpers from Towa releases up to v1.2.28 only
-    accept Microsoft's sign-in page and do not work with phonekey.
+    phonekey 0.1.0 used the older `towa-passkey` helper, 0.2.0 and later
+    need hybrid-passkey.
 2.  Register it for the current user:
 
-        towa-passkey --install
+        hybrid-passkey --install
 
-    This writes `~/.mozilla/native-messaging-hosts/towa_passkey.json`. If the
-    helper was already registered for Towa, run it again so the manifest also
-    allows phonekey.
+    This writes `~/.mozilla/native-messaging-hosts/hybrid_passkey.json` and
+    removes `towa_passkey.json` left by the older helper.
 3.  Install `phonekey.xpi` from the
     [releases](https://github.com/renaudallard/phonekey/releases/latest), it
     is signed by Mozilla. `./build.sh` builds an unsigned `phonekey.xpi` from
