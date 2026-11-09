@@ -39,11 +39,13 @@ uses [libwebauthn](https://github.com/linux-credentials/libwebauthn)
     This writes `~/.mozilla/native-messaging-hosts/towa_passkey.json`. If the
     helper was already registered for Towa, run it again so the manifest also
     allows phonekey.
-3.  Build the add-on with `./build.sh`, which writes `phonekey.xpi`. Release
-    builds of Firefox only install add-ons signed by Mozilla; on ESR,
-    Developer Edition and Nightly, setting `xpinstall.signatures.required` to
-    false in `about:config` allows the unsigned file. To try it, load
-    `src/manifest.json` from `about:debugging`.
+3.  Install `phonekey.xpi` from the
+    [releases](https://github.com/renaudallard/phonekey/releases/latest), it
+    is signed by Mozilla. `./build.sh` builds an unsigned `phonekey.xpi` from
+    the source, which release builds of Firefox refuse. On ESR, Developer
+    Edition and Nightly, setting `xpinstall.signatures.required` to false in
+    `about:config` allows it, or load `src/manifest.json` from
+    `about:debugging`.
 
 ## How it works
 
@@ -56,6 +58,13 @@ uses [libwebauthn](https://github.com/linux-credentials/libwebauthn)
 *   `src/prompt.html` lets the user pick the phone or a security key, then
     shows the QR code and progress. If the phone cannot be used, the reason
     is shown and the user can try again or pick something else.
+
+## Password managers
+
+Password managers that handle passkeys, such as Bitwarden, take the request
+first. Their option to use a device or hardware key hands it to phonekey.
+Turning off their passkey handling (in Bitwarden, **Ask to save and use
+passkeys**) brings up phonekey's prompt directly.
 
 ## Limitations
 
