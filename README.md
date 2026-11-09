@@ -71,3 +71,7 @@ passkeys**) brings up phonekey's prompt directly.
     silent requests keep Firefox's own handling.
 *   WebAuthn extensions (prf, largeBlob) are not passed to the phone, and
     related origin requests are not supported.
+
+## License
+
+BSD 2-Clause, see [LICENSE](LICENSE).
