@@ -19,12 +19,17 @@ for (let element of document.querySelectorAll("[data-i18n]")) {
   element.textContent = message(element.dataset.i18n);
 }
 
+function showProgress(aName) {
+  $("progress").textContent = message(aName);
+  $("progress").dataset.glyph = aName;
+}
+
 function showScan() {
   $("error").hidden = true;
   $("choose").hidden = true;
   $("scan").hidden = false;
   $("qr").removeAttribute("src");
-  $("progress").textContent = message("waiting");
+  showProgress("waiting");
 }
 
 let port = browser.runtime.connect({ name: "phonekey-view" });
@@ -37,7 +42,7 @@ port.onMessage.addListener(aMessage => {
     // The helper sends SVG text, shown as an image so nothing in it runs.
     $("qr").src = "data:image/svg+xml," + encodeURIComponent(aMessage.qr);
   } else if (kStatusStrings[aMessage.status]) {
-    $("progress").textContent = message(kStatusStrings[aMessage.status]);
+    showProgress(kStatusStrings[aMessage.status]);
   } else if (aMessage.error) {
     $("error").textContent = message("phoneError", aMessage.error);
     $("error").hidden = false;

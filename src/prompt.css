@@ -59,3 +59,46 @@ h1 {
 #qr:not([src]) {
   visibility: hidden;
 }
+
+/* Glyphs are masks filled with the text colour, so they follow dark mode. */
+#phone::before,
+#key::before,
+#error::before,
+#progress[data-glyph]::before {
+  content: "";
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  margin-inline-end: 0.4em;
+  vertical-align: -0.3em;
+  background-color: currentColor;
+  mask: center / contain no-repeat;
+}
+
+#phone::before {
+  mask-image: url("glyphs/phone.svg");
+}
+
+#key::before {
+  mask-image: url("glyphs/security-key.svg");
+}
+
+#error::before {
+  mask-image: url("glyphs/error.svg");
+}
+
+#progress[data-glyph="waiting"]::before {
+  mask-image: url("glyphs/waiting.svg");
+}
+
+#progress[data-glyph="connecting"]::before {
+  mask-image: url("glyphs/connecting.svg");
+}
+
+#progress[data-glyph="connected"]::before {
+  mask-image: url("glyphs/connected.svg");
+}
+
+#progress[data-glyph="confirm"]::before {
+  mask-image: url("glyphs/confirm-on-phone.svg");
+}
